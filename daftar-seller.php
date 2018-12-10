@@ -52,7 +52,7 @@ require_once 'koneksi.php';
 	<div class="row" style="margin-top: 25px;">
 		<img class="mx-auto" src="icon/omahternak.png" style="height: 60px;">	
 	</div>
-	<h4 style="color:#00c300; text-align: center; margin-top: 25px; margin-bottom: 15px;"><strong>Daftar Akun Omahternak</strong></h4>
+	<h4 style="color:#00c300; text-align: center; margin-top: 25px; margin-bottom: 15px;"><strong>Daftar Akun Peternak Omahternak</strong></h4>
 	<div class="row" style="margin-bottom: 10px;">
 		<div style="align-items: center;" class="col-xs-12 col-md-4 col-lg-4 card shadow p-3 mb-5 bg-white rounded mx-auto">
 		<form method="post">
@@ -112,7 +112,7 @@ require_once 'koneksi.php';
 				$alamat=$_POST['alamat'];
 				$telepon=$_POST['telepon'];
 
-				$con=mysqli_query($koneksi, "INSERT INTO pelanggan (nama, email, password, jenis_kelamin,alamat,telepon) VALUES ('$nama','$email','$password','$jenis_kelamin','$alamat','$telepon')") OR die("error");
+				$con=mysqli_query($koneksi, "INSERT INTO peternak (nama, email, password, jenis_kelamin,alamat,telepon) VALUES ('$nama','$email','$password','$jenis_kelamin','$alamat','$telepon')") OR die("error");
 
 				echo "<script>alert('Anda sukses mendaftar!');</script>";
 				echo "<meta http-equiv='refresh' content='1;url=login.php'>";
