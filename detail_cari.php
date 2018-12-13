@@ -13,15 +13,8 @@ require_once 'koneksi.php';
   <script src="bootstrap/js/jquery.min.js"></script>
   <script src="bootstrap/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="icon/fontawesome/css/all.css">
-	<style>
-    .card:hover{
-    border-radius: 5px;
-    transition: .5s;
-    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2), 0 8px 22px 0 rgba(0, 0, 0, 0.19);
-  }
- 	</style>
 </head>
-<body>
+<body style="background-color: #f2f2f2">
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
   <div class="container-fluid">
@@ -55,7 +48,7 @@ require_once 'koneksi.php';
 
     <ul class="navbar-nav ">
       <?php if(isset($_SESSION["pelanggan"])): ?>
-      <li class="nav-item my-2 mr-sm-3 ml-sm-3">  
+      <li class="nav-item my-2 mr-sm-4 ml-sm-3">  
         <a href="tambahproduk.php" class="btn btn-danger btn-sm my-1" type="submit" title="Pasang Iklan"><i class="fas fa-plus"></i> Jual Ternak</a>  
       </li>
       <?php else: ?>
@@ -82,7 +75,7 @@ require_once 'koneksi.php';
 
       <?php if(isset($_SESSION["pelanggan"])): ?>
       <li class="nav-item dropdown">
-        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link ml-sm-3" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <img src="img/farmer.png" width="40px" title="Akun Saya">
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" >
@@ -112,19 +105,21 @@ require_once 'koneksi.php';
 </nav>
 
   
-<div class="container" style="margin-top: 75px">
-	<div class="card">
-    	<div class="card-body bg-light text-dark" style="color: white">
-    		<?php 
-				if (isset($_GET['cari'])) {
-				  	$cari = $_GET['cari'];
-				  	echo "<h5><strong>Hasil Pencarian : $cari</strong></h5>";
-				 }else{
-				 	echo "<h5><strong>Macam-macam hewan ternak</strong></h5>";
-				 }
-			?>
-    	</div>
-  	</div>
+<div class="container" style="margin-top: 80px">
+  <ul class="breadcrumb bg-light border">
+    <li class="breadcrumb-item text-success"><a class="text-success" href="index.php">Home</a></li>
+    <li class="breadcrumb-item active">Ternak</li>
+  </ul>
+	<div class="border-0">
+    <?php 
+			if (isset($_GET['cari'])) {
+				  $cari = $_GET['cari'];
+				  echo "<h5 class='text-success'><strong>Hasil Pencarian : $cari</strong></h5>";
+				}else{
+				 	echo "<h5 class='text-success'><strong>Macam-macam hewan ternak</strong></h5>";
+			}
+		?>  	
+  </div>
 	<div class="row my-2">
 		<div class="col-12 col-md-2 col-lg-2">
 			<div class="my-1">
@@ -159,6 +154,7 @@ require_once 'koneksi.php';
 				  		$produk = mysqli_query($koneksi, "SELECT * FROM ternak ORDER BY kd_ternak DESC");
 					}
 				?>
+        
 				<?php 
 					require_once 'produk2.php';
 			 	?>
@@ -168,15 +164,39 @@ require_once 'koneksi.php';
 	</div>
 </div>
 
+<div class="container-fluid bg-light" style="margin-top: 30px;">
+  <div class="row mx-auto">
+    <div class="col-xs-12 col-md-3 col-lg-3 col-xl-3 my-2">
+      <img src="icon/omahternak.png" width="200" title="Omahternak.id">
+    </div>
+    <div class="col-xs-12 col-md-6 col-lg-6 col-xl-6 my-3">
+      <img class="ml-sm-5" src="icon/bank.png" title="rekening bersama" style="width: 300px; height: 30px;">
+    </div>
+    <div class="col-xs-12 col-md-3 col-lg-3 col-xl-3 my-2 panelfootersosmed mx-auto">
+      <h6>Ikuti Kami :</h6>
+       <ul>
+            <li><a rel="follow" target="_blank" href="#"><img alt="facebook omahternak" title="Facebook Omahternak" src="icon/facebook.png" width="30px"></a></li>
+
+            <li><a rel="follow" target="_blank" href="#"><img alt="twitter omahternak" title="Twitter Omahternak" src="icon/twitter.png" width="30px"></a></li>
+
+            <li><a rel="follow" target="_blank" href="#"><img alt="instagram omahternak" title="Instagram Omahternak" src="icon/instagram.png" width="30px"></a></li>
+
+            <li><a rel="follow" target="_blank" href="#"><img alt="youtube omahternak" title="Youtube Omahternak" src="icon/youtube.png" width="30px"></a></li>
+
+            <li><a rel="follow" target="_blank" href="#"><img alt="google plus omahternak" title="Google Plus Omahtenak" src="icon/google-plus.png" width="30px"></a></li>
+          </ul>
+    </div>
+  </div>
+</div>
 <div class="container-fluid bg-success">
-  <div class="row mx-auto" style="padding-top: 10px">
-    <div class="col-12 col-md-6 col-lg-3">
+  <div class="row mx-auto ml-sm-5" style="padding-top: 10px">
+    <div class="col-xs-12 col-md-6 col-lg-3 col-xl-3">
       <h5 style="color: white"><strong>Tentang Kami</strong></h5>
       <p style="color: white" class="text-justify"><strong>Omahternak.id</strong> 
       adalah Tempat Jual Beli Ternak Berkualitas dan Investasi Ternak Terpercaya. Jl. Bibis No.25, Bangunjiwo, Kasihan, Bantul, D.I Yogyakarta.<br/> cs@omahternak.com <br/>Jam Layanan: 08.00-17.00 WIB</p>
       
     </div>
-    <div class="col-12 col-md-6 col-lg-3">
+    <div class="col-xs-12 col-md-6 col-lg-3 col-xl-3">
     <h5 class="text-white ml-sm-5"><strong>Panduan Umum</strong></h5>
       <ul class="navbar-nav ml-sm-5 my-2">
         <li><a class="text-white" style="text-decoration: none;" href="">Tentang Omahternak</a></li>
@@ -188,8 +208,8 @@ require_once 'koneksi.php';
         <li><a class="text-white" style="text-decoration: none;" href="">Syarat dan Ketentuan</a></li>
       </ul>
     </div>
-    <div class="col-12 col-md-6 col-lg-3">
-    <h5 class="ml-sm-4 text-white"><strong>Hubungi Kami</strong></h5>      
+    <div class="col-xs-12 col-md-6 col-lg-3 col-xl-3 my-1">
+    <h5 class="text-white ml-sm-4"><strong>Hubungi Kami</strong></h5>      
       <ul class="navbar-nav ml-sm-4">
         <li><a class="text-white" style="text-decoration: none;" href="">info@omahternak.id</a></li>
         <li><a class="text-white" style="text-decoration: none;" href="">omahternak.id</a></li>
@@ -199,7 +219,7 @@ require_once 'koneksi.php';
         <li><a class="text-white" style="text-decoration: none;" href="">omahternakid</a></li>
       </ul>
     </div>
-    <div class="col-12 col-md-6 col-lg-3">
+    <div class="col-xs-12 col-md-6 col-lg-3 col-xl-3 my-1">
       <h5 class="text-white"><strong>Download Aplikasi</strong></h5>
       <img src="img/coming_soon_googleplay.png" width="200">
     </div>
@@ -207,7 +227,7 @@ require_once 'koneksi.php';
 </div>
 <div class="container-fluid bg-light">
   <div class="row">
-    <div class="col">
+    <div class="col-12">
       <p class="my-3 mx-auto">&copy; 2018 Omahternak.Id</p>
     </div>
   </div>

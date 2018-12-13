@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 10, 2018 at 03:12 PM
+-- Generation Time: Dec 13, 2018 at 05:19 PM
 -- Server version: 10.1.35-MariaDB
 -- PHP Version: 7.2.9
 
@@ -86,6 +86,7 @@ CREATE TABLE `ternak` (
   `jumlah` varchar(25) NOT NULL,
   `deskripsi` text NOT NULL,
   `harga` varchar(25) NOT NULL,
+  `minim_beli` varchar(50) NOT NULL,
   `foto` varchar(25) NOT NULL,
   `foto2` varchar(25) NOT NULL,
   `foto3` varchar(25) NOT NULL,
@@ -96,15 +97,23 @@ CREATE TABLE `ternak` (
 -- Dumping data for table `ternak`
 --
 
-INSERT INTO `ternak` (`kd_ternak`, `nama_ternak`, `jenis_ternak`, `berat`, `umur`, `jumlah`, `deskripsi`, `harga`, `foto`, `foto2`, `foto3`, `foto4`) VALUES
-(1, 'Sapi Metal Indukan', 'Non Unggas', '400', '2', '10', 'Sapi Metal', '15000000', 'sapi1.jpg', '', '', ''),
-(2, 'Sapi Metal Jantan', 'Non Unggas', '400', '2', '5', 'Sapi Metal Jantan', '16000000', 'sapi2.jpg', '', '', ''),
-(3, 'Sapi Metal Super', 'Non Unggas', '1000', '3', '10', 'Sapi Metal Super', '25000000', 'sapi3.jpg', '', '', ''),
-(4, 'Sapi  Jantan', 'Non Unggas', '600', '3', '5', 'Sapi Super', '20000000', 'sapi4.jpg', '', '', ''),
-(5, 'Sapi Metal Jantan', 'Non Unggas', '400', '2', '7', 'Sapi Metal', '16000000', 'sapi5.jpg', '', '', ''),
-(6, 'Kambing Jawa', 'Non Unggas', '100', '2', '10', 'Kambing Jawa', '2200000', 'kambing4.jpg', '', '', ''),
-(7, 'Kambing Jawa', 'Non Unggas', '100', '2', '30', 'Kambing Jawa', '2000000', 'kambingjawa.jpg', '', '', ''),
-(8, 'Domba Garut', 'Non Unggas', '100', '2', '10', 'Domba Garut', '3500000', 'dombagarut.jpeg', '', '', '');
+INSERT INTO `ternak` (`kd_ternak`, `nama_ternak`, `jenis_ternak`, `berat`, `umur`, `jumlah`, `deskripsi`, `harga`, `minim_beli`, `foto`, `foto2`, `foto3`, `foto4`) VALUES
+(1, 'Sapi Metal Indukan', 'Non Unggas', '400', '2', '30', 'Sapi Metal', '15000000', '2', 'sapi1.jpg', '', '', ''),
+(2, 'Sapi Metal Jantan', 'Non Unggas', '400', '2', '25', 'Sapi Metal Jantan', '16000000', '2', 'sapi2.jpg', '', '', ''),
+(3, 'Sapi Metal Super', 'Non Unggas', '1000', '3', '15', 'Sapi Metal Super', '25000000', '1', 'sapi3.jpg', '', '', ''),
+(4, 'Sapi  Jantan', 'Non Unggas', '600', '3', '15', 'Sapi Super', '20000000', '1', 'sapi4.jpg', '', '', ''),
+(5, 'Sapi Metal Jantan', 'Non Unggas', '400', '2', '10', 'Sapi Metal', '16000000', '2', 'sapi5.jpg', '', '', ''),
+(6, 'Kambing Jawa', 'Non Unggas', '100', '2', '20', 'Kambing Jawa', '2200000', '3', 'kambing4.jpg', '', '', ''),
+(7, 'Kambing Jawa', 'Non Unggas', '100', '2', '30', 'Kambing Jawa', '2000000', '4', 'kambingjawa.jpg', '', '', ''),
+(8, 'Domba Garut', 'Non Unggas', '100', '2', '25', 'Domba Garut', '3500000', '2', 'dombagarut.jpeg', '', '', ''),
+(9, 'Ayam Jawa Jago', 'Unggas', '2', '1', '25', 'Ayam kampung Jago', '130000', '5', 'ayam.jpg', '', '', ''),
+(10, 'Ayam Jawa Jantan', 'Unggas', '2', '1', '20', 'Ayam jantan petarung', '200000', '3', 'ayam3.jpg', '', '', ''),
+(11, 'Ayam Kate Jantan', 'Unggas', '1', '1', '25', 'Ayam Kate Jantan', '120000', '5', 'ayamkate2.jpg', '', '', ''),
+(12, 'Angsa', 'Unggas', '3', '1', '20', 'Angsa', '120000', '4', 'angsa1.jpg', '', '', ''),
+(13, 'Bebek Mandarin', 'Unggas', '1', '1', '30', 'Bebek Mandarin', '150000', '4', 'bebekmandarin.jpg', '', '', ''),
+(14, 'Entok Jantan', 'Unggas', '2', '1', '30', 'Entok Jantan', '120000', '4', 'entok2.jpg', '', '', ''),
+(15, 'Bebek Betina', 'Unggas', '2', '1', '70', 'Bebek betina', '40000', '5', 'bebek3.jpg', '', '', ''),
+(16, 'Kalkun Jantan', 'Unggas', '3', '1', '30', 'Kalkun Jantan', '150000', '5', 'kalkun3.jpg', '', '', '');
 
 --
 -- Indexes for dumped tables
@@ -148,7 +157,7 @@ ALTER TABLE `pelanggan`
 -- AUTO_INCREMENT for table `ternak`
 --
 ALTER TABLE `ternak`
-  MODIFY `kd_ternak` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `kd_ternak` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
