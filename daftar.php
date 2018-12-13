@@ -64,11 +64,11 @@ require_once 'koneksi.php';
 			  <label for="gender">Jenis Kelamin :</label>
 			</div>
 			<div class="form-check form-check-inline">
-				<input class="form-check-input" type="radio" name="option" id="men" value="Laki-laki">
+				<input class="form-check-input" type="radio" name="jenis_kelamin" id="men" value="Laki-laki">
 				<label class="form-check-label" for="men">Laki-laki</label>
 				</div>
 				<div class="form-check form-check-inline">
-				<input class="form-check-input" type="radio" name="option" id="women" value="Perempuan">
+				<input class="form-check-input" type="radio" name="jenis_kelamin" id="women" value="Perempuan">
 				<label class="form-check-label" for="women">Perempuan</label>
 			</div>
 			<div class="form-group">
@@ -112,10 +112,19 @@ require_once 'koneksi.php';
 				$alamat=$_POST['alamat'];
 				$telepon=$_POST['telepon'];
 
-				$con=mysqli_query($koneksi, "INSERT INTO pelanggan (nama, email, password, jenis_kelamin,alamat,telepon) VALUES ('$nama','$email','$password','$jenis_kelamin','$alamat','$telepon')") OR die("error");
+				$email_check = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM pelanggan WHERE email = '$email'"));
+				if ($email_check > 0) {
+					echo "<script>alert('Email sudah digunakan!');</script>";
+					echo "<meta http-equiv='refresh' content='1;url=daftar.php'>";
+				}else{
+					$con=mysqli_query($koneksi, "INSERT INTO pelanggan (nama, email, password, jenis_kelamin,alamat,telepon) VALUES ('$nama','$email','$password','$jenis_kelamin','$alamat','$telepon')") OR die("error");
 
 				echo "<script>alert('Anda sukses mendaftar!');</script>";
 				echo "<meta http-equiv='refresh' content='1;url=login.php'>";
+				}
+				
+
+				
 			}
 		 ?>
 
