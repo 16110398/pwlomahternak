@@ -113,10 +113,22 @@ require_once 'koneksi.php';
 				$telepon=$_POST['telepon'];
 
 				$email_check = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM pelanggan WHERE email = '$email'"));
-				if ($email_check > 0) {
+				$nama_check = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM pelanggan WHERE nama = '$nama'"));
+				$nama_email_check = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM pelanggan WHERE nama = '$nama' AND email = '$email'"));
+
+				if ($nama_email_check > 0) {
+					echo "<script>alert('Nama dan Email sudah digunakan!');</script>";
+					echo "<meta http-equiv='refresh' content='1;url=daftar.php'>";
+				}
+				else if ($nama_check >0){
+					echo "<script>alert('Nama sudah digunakan!');</script>";
+					echo "<meta http-equiv='refresh' content='1;url=daftar.php'>";
+				}
+				else if ($email_check >0){
 					echo "<script>alert('Email sudah digunakan!');</script>";
 					echo "<meta http-equiv='refresh' content='1;url=daftar.php'>";
-				}else{
+				}
+				else{
 					$con=mysqli_query($koneksi, "INSERT INTO pelanggan (nama, email, password, jenis_kelamin,alamat,telepon) VALUES ('$nama','$email','$password','$jenis_kelamin','$alamat','$telepon')") OR die("error");
 
 				echo "<script>alert('Anda sukses mendaftar!');</script>";
