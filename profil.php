@@ -1,12 +1,6 @@
 <?php 
 session_start();
 require_once 'koneksi.php';
-
-if(!isset($_SESSION['pelanggan'])) {
-   header('location:login.php'); 
-} else { 
-   $data = $_SESSION['pelanggan']; 
-}
 ?>
 
 <!DOCTYPE html>
@@ -94,8 +88,8 @@ if(!isset($_SESSION['pelanggan'])) {
           <img class="ml-sm-3" src="img/farmer.png" width="40px" title="Akun Saya">
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" >
-          <a class="dropdown-item" href="profil.php"><img class="rounded-circle" src="foto_peternak/<?php echo $data['img_profil']; ?>" height="50px" width="50px">
-          <p><strong><?php echo $data["nama"]; ?></strong></p></a> 
+          <a class="dropdown-item" href="profil.php"><img src="img/farmer.png" width="35px">
+          <p><strong>Wawan</strong></p></a> 
           <a class="dropdown-item" href="profil.php">
           <p class="small">Lihat Profil</p></a>
           <div class="dropdown-divider"></div>
@@ -119,21 +113,127 @@ if(!isset($_SESSION['pelanggan'])) {
   </div>
 </nav>
 
-<?php 
-  if (isset($_GET['halaman']))
-  {
-    if ($_GET['halaman']=="cari") {
-        include 'detail_cari.php';
-    }
-    elseif ($_GET['halaman']=="detail") {
-        include 'detail_produk.php';
-    }
 
-  }else{
-    include 'home.php';
-  }
 
- ?>
+
+<div class="container" style="margin-top: 80px; margin-bottom: 50px;">
+  <div class="row">
+    
+  </div>
+  <div class="row">
+    <div class="col-12 col-md-4 col-lg-4 mb-1">
+      <div class="card">
+
+        <div class="container">
+        <div class="row">
+          <div class="col-12 mt-2">
+             <img class="img-fluid rounded-circle mx-auto d-block" src="foto_peternak/wawan.png" width="200" height="200">
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-12">
+            <h6>Wawan</h6>
+            <hr>
+          </div>
+        </div>
+         <div class="row">
+          <div class="col-12">
+            <h6>085725813121</h6>
+            <hr>
+          </div>
+        </div>
+         <div class="row">
+          <div class="col-12">
+            <h6>Batul</h6>
+            <hr>
+          </div>
+        </div>
+         <div class="row">
+          <div class="col-12">
+            <h6>Wawan</h6>
+            <hr>
+          </div>
+        </div>
+
+      </div>
+
+
+      </div>
+    </div>
+    <div class="col-12 col-md-8 col-lg-8">
+      <div class="card h-100">
+            <div class="container mt-4">
+              
+              <ul class="nav nav-pills" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" data-toggle="pill" href="#home">Ternak Saya</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="pill" href="#menu1">Penjualan</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="pill" href="#menu2">Pembelian</a>
+                </li>
+              </ul>
+
+              
+              <div class="tab-content">
+                <div id="home" class="container tab-pane active"><br>
+                  <h3>Daftar Ternak</h3>
+                  <div class="row">
+                    <?php $produk = mysqli_query($koneksi, "SELECT * FROM ternak ORDER BY kd_ternak DESC LIMIT 3"); ?>
+                    <?php while ($perproduk=$produk->fetch_assoc()) { ?>
+                      <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4" style="padding-bottom:15px; ; margin-top: 7px;">
+                        <div class="card bg-white border">
+                          <div class="kontainer bg-white rounded">
+                            <a href="index.php?halaman=detail&id=<?php echo $perproduk['kd_ternak'];?>">
+                              <div class="card-body line" style="text-align:center; overflow:hidden; padding:0;">
+                                <img class="image img-fluid mx-auto" alt="responsive image" style="height:150px; width:100% ;" src="foto_produk/<?php echo $perproduk['foto'];?>"> 
+                                <div class="middle">
+                                    <div class="tombol">Lihat</div>
+                                </div>
+                            </a>
+                              </div>
+                          </div>
+                          <div class="card-footer text-center">
+                            <div class="caption">
+                              <a class="link-text" href="index.php?halaman=detail&id=<?php echo $perproduk['kd_ternak'];?>">
+                              <h6 class="link-text text-success"><strong> <?php echo $perproduk['nama_ternak']; ?></strong></h6></a>
+                              <h6 style="color:orange"> Rp. <?php echo number_format($perproduk['harga']);?>,- /Ekor</h6>
+                              <h6 class="text-secondary">Jumlah Stok <?php echo number_format($perproduk['jumlah']);?> Ekor</h6>
+                            </div>
+                          </div>  
+                        </div>
+                      </div>    
+                    <?php } ?>  
+                  </div>
+                </div>
+                <div id="menu1" class="container tab-pane fade"><br>
+                  <h3>Penjualan</h3>
+                  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div id="menu2" class="container tab-pane fade"><br>
+                  <h3>Pembelian</h3>
+                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                </div>
+              </div>
+            </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
 
 
 <div class="container-fluid bg-light">

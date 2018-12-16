@@ -87,6 +87,7 @@ require_once 'koneksi.php';
 				{
 					$akun=$loginuser->fetch_assoc();
 					$_SESSION["pelanggan"]=$akun;
+					$_SESSION["nama"]=$akun;
 					echo "<script>alert('Anda sukses login');</script>";
 					echo "<meta http-equiv='refresh' content='1;url=index.php'>";
 				}

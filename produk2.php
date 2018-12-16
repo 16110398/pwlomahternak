@@ -2,7 +2,7 @@
 			<div class="col-12 col-md-6 col-lg-3" style="padding-bottom:15px; ; margin-top: 7px;">
 				<div class="card bg-white border-0">
 				<div class="kontainer bg-white rounded">
-				<a href="detail_produk.php?id=<?php echo $perproduk['kd_ternak'];?>">
+				<a href="index.php?halaman=detail&id=<?php echo $perproduk['kd_ternak'];?>">
 					<div class="card-body" style="text-align:center; overflow:hidden; padding:0;">
 					
 						<img class="image img-fluid mx-auto" alt="responsive image" style="height:180px; width:220px ;  "; src="foto_produk/<?php echo $perproduk['foto'];?>"> 
