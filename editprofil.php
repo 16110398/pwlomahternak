@@ -61,7 +61,7 @@ if (isset($_POST['edit']))
 {
 	$img_profil=$_FILES['img_profil']['name'];
 	$lokasifoto=$_FILES['img_profil']['tmp_name'];
-	$password=md5($password);
+	$password=md5($_POST['password']);
 	//jika foto dirubah
 	if(!empty($lokasifoto))
 	{

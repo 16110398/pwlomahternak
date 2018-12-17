@@ -61,15 +61,9 @@ if(isset($_SESSION['pelanggan'])) {
     </form>
 
    <ul class="navbar-nav ">
-      <?php if(isset($_SESSION["pelanggan"])): ?>
       <li class="nav-item my-2 mr-sm-4 ml-sm-3">  
-        <a href="tambahproduk.php" class="btn btn-danger btn-sm my-1" type="submit" title="Jual Ternak"><i class="fas fa-plus"></i> Jual Ternak</a>  
+        <a href="index.php?halaman=profil&page=tambahternak" class="btn btn-danger btn-sm my-1" type="submit" title="Jual Ternak"><i class="fas fa-plus"></i> Jual Ternak</a>  
       </li>
-      <?php else: ?>
-      <li class="nav-item my-2">
-        <a href="login.php" class="btn btn-danger btn-sm my-1 ml-sm-5 mr-sm-3" type="submit" title="Jual Ternak"><i class="fas fa-plus"></i> Jual Ternak</a>
-      </li>
-       <?php endif ?> 
 
       <?php if(isset($_SESSION["pelanggan"])): ?>
       <li class="nav-item my-3 mr-sm-3">
