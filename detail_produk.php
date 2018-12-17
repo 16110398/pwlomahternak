@@ -140,7 +140,7 @@ $ternak = $detail->fetch_assoc();
                   <a class="nav-link" data-toggle="tab" href="#menu1">Deskripsi Ternak</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#menu2">Profil Peternak</a>
+                  <a class="nav-link" data-toggle="tab" href="#menu2">Komentar</a>
                 </li>
               </ul>
 
@@ -158,7 +158,7 @@ $ternak = $detail->fetch_assoc();
                   
                 </div>
                 <div id="menu2" class="container tab-pane fade"><br>
-                  <h5>PROFIL PETERNAK</h5>
+                  <h5>Komentar</h5>
                   <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
 
                   <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -184,7 +184,7 @@ $ternak = $detail->fetch_assoc();
           <div class="container">
             <h5 class="text-dark my-3 ml-3">Ternak Lainnya</h5>
             <div class="row my-2 mr-1 ml-1">
-              <?php $produk = mysqli_query($koneksi, "SELECT * FROM ternak ORDER BY kd_ternak DESC LIMIT 3"); ?>
+              <?php $produk = mysqli_query($koneksi, "SELECT * FROM ternak JOIN pelanggan ON ternak.id_user=pelanggan.id_user WHERE ternak.id_user='$ternak[id_user]' LIMIT 3 "); ?>
               <?php while ($perproduk=$produk->fetch_assoc()) { ?>
                 <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4" style="padding-bottom:15px; ; margin-top: 7px;">
                   <div class="card bg-white border">

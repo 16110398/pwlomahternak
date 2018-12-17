@@ -2,11 +2,10 @@
 session_start();
 require_once 'koneksi.php';
 
-if(!isset($_SESSION['pelanggan'])) {
-   header('location:login.php'); 
-} else { 
-   $data = $_SESSION['pelanggan']; 
+if(isset($_SESSION['pelanggan'])) {
+  $data = $_SESSION['pelanggan']; 
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +18,7 @@ if(!isset($_SESSION['pelanggan'])) {
 	<script src="bootstrap/js/jquery.min.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
   <script src="bootstrap/js/popper.min.js"></script>
-   <script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+  <script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>
   <link rel="stylesheet" href="icon/fontawesome/css/all.css">
 	<style>
   	.carousel-inner img {
@@ -94,9 +93,9 @@ if(!isset($_SESSION['pelanggan'])) {
           <img class="ml-sm-3" src="img/farmer.png" width="40px" title="Akun Saya">
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" >
-          <a class="dropdown-item" href="profil.php"><img class="rounded-circle" src="foto_peternak/<?php echo $data['img_profil']; ?>" height="50px" width="50px">
+          <a class="dropdown-item" href="index.php?halaman=profil"><img class="rounded-circle" src="foto_peternak/<?php echo $data['img_profil']; ?>" height="50px" width="50px">
           <p><strong><?php echo $data["nama"]; ?></strong></p></a> 
-          <a class="dropdown-item" href="profil.php">
+          <a class="dropdown-item" href="index.php?halaman=profil">
           <p class="small">Lihat Profil</p></a>
           <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Iklan Produk</a>
@@ -123,10 +122,13 @@ if(!isset($_SESSION['pelanggan'])) {
   if (isset($_GET['halaman']))
   {
     if ($_GET['halaman']=="cari") {
-        include 'detail_cari.php';
+      include 'detail_cari.php';
     }
     elseif ($_GET['halaman']=="detail") {
-        include 'detail_produk.php';
+      include 'detail_produk.php';
+    }
+    elseif ($_GET['halaman']=="profil") {
+      include 'profil.php';
     }
 
   }else{
