@@ -30,32 +30,32 @@ $ternak = $detail->fetch_assoc();
     <li class="breadcrumb-item active"><?php echo $ternak['nama_ternak']; ?></li>
   </ul>
   <div class="row">
-    <div class="col-12 col-md-9 col-lg-9 col-xl-9 my-1">
+    <div class="col-12 col-md-12 col-lg-9 col-xl-9 my-1">
       <div class="card bg-white">
         <div class="row">
           <div class="col-12 col-md-5 col-lg-5">
-            <img class="img img-fluid ml-3 my-3" src="foto_produk/<?php echo $ternak['foto'];?>" style="height: 210px;">
+            <img class="d-block img-fluid ml-3 my-3" src="foto_produk/<?php echo $ternak['foto'];?>" style="height: 220px;">
           </div>
           <div class="col-12 col-md-7 col-lg-7">
             <div class="row mr-1">
               <div class="col-12 my-3">
-                <h3 class="text-success"><?php echo $ternak['nama_ternak']; ?></h3>
+                <h3 class="text-success ml-3"><?php echo $ternak['nama_ternak']; ?></h3>
                 <hr>
               </div>
             </div>
             <div class="row mr-1">
               <div class="col-12">
-                <h6>Berat : <?php echo $ternak['berat']; ?> Kg</h6>
-                <h6>Umur : <?php echo $ternak['umur']; ?> Tahun</h6>
-                <h6>Kategori : <?php echo $ternak['jenis_ternak']; ?></h6>
+                <h6 class="ml-3">Berat : <?php echo $ternak['berat']; ?> Kg</h6>
+                <h6 class="ml-3">Umur : <?php echo $ternak['umur']; ?> Tahun</h6>
+                <h6 class="ml-3">Kategori : <?php echo $ternak['jenis_ternak']; ?></h6>
                 <hr>
               </div>
             </div>
             <div class="row mr-1">
               <div class="col-12">
-                <h4 class="text-warning">Rp. <?php echo number_format($ternak['harga']);?>,- /Ekor</h4>
-                <h6 class="text-dark">Minimal Pembelian : <?php echo $ternak['minim_beli']; ?> Ekor</h6>
-                <h6 class="text-info">Stok : <?php echo $ternak['jumlah']; ?> Ekor</h6>
+                <h4 class="text-warning ml-3">Rp. <?php echo number_format($ternak['harga']);?>,- /Ekor</h4>
+                <h6 class="text-dark ml-3">Minimal Pembelian : <?php echo $ternak['minim_beli']; ?> Ekor</h6>
+                <h6 class="text-info ml-3">Stok : <?php echo $ternak['jumlah']; ?> Ekor</h6>
                 <hr>
               </div>
             </div>
@@ -76,7 +76,7 @@ $ternak = $detail->fetch_assoc();
       </div>
     </div>
 
-    <div class="col-12 col-md-3 col-lg-3 col-xl-3 my-1">
+    <div class="col-12 col-md-12 col-lg-3 col-xl-3 my-1">
       <div class="card bg-white">
 
       <div class="container">
@@ -88,7 +88,7 @@ $ternak = $detail->fetch_assoc();
         <hr/>
         <div class="row my-3">
           <div class="col-md-4">
-            <img src="foto_peternak/<?php echo $ternak['img_profil']; ?>" class="rounded-circle ml-2" alt="Cinque Terre" width="80" height="80">
+            <img src="foto_peternak/<?php echo $ternak['img_profil']; ?>" class="rounded-circle ml-2" alt="fotoprofil" width="80" height="80">
           </div>
           <div class="col-md-8">
             <h5 class="text-dark ml-3 mr-1 my-1"><?php echo $ternak['nama']; ?></h5>
@@ -127,7 +127,7 @@ $ternak = $detail->fetch_assoc();
 
 <div class="container my-3">
   <div class="row">
-    <div class="col-12 col-md-9 col-lg-9 col-xl-9 my-1">
+    <div class="col-12 col-md-12 col-lg-9 col-xl-9 my-1">
       <div class="card bg-white">
         <div class="row">
             <div class="container">
@@ -177,7 +177,7 @@ $ternak = $detail->fetch_assoc();
 
 <div class="container mb-4">
   <div class="row">
-    <div class="col-12 col-md-9 col-lg-9 col-xl-9 my-1">
+    <div class="col-12 col-md-12 col-lg-9 col-xl-9 my-1">
       <div class="card bg-white">
         <div class="row">
 

@@ -53,7 +53,7 @@ require_once 'koneksi.php';
 	</div>
 	<h5 style="color:#00c300; text-align: center; margin-top:15px; margin-bottom: 15px;"><strong>Silahkan Login dengan akun anda</strong></h5>
 	<div class="row">
-		<div class="col-xs-12 col-md-4 col-lg-4 card shadow p-3 mb-5 bg-white rounded mx-auto">
+		<div class="col-xs-12 col-md-6 col-lg-4 card shadow p-3 mb-5 bg-white rounded mx-auto">
 		<form method="post">
 			<div class="form-group">
 				<label for="email">Email :</label>

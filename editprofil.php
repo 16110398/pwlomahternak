@@ -34,7 +34,7 @@
 			</div>
 			<div class="form-group">
 				<label for="pass">Password :</label>
-				<input type="password" class="form-control" id="pass" name="password"  required="Masukan password" value="<?php echo $data['password']; ?>">
+				<input type="password" class="form-control" id="pass" name="password"  required="Masukan password"  placeholder="Masukan password">
 			</div>
 			<div class="form-group">
 				<label for="telepon">Telepon :</label>

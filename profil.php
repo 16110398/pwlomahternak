@@ -17,7 +17,7 @@
         <div class="container">
         <div class="row">
           <div class="col-12 mt-3">
-             <img class="rounded-circle mx-auto d-block" src="foto_peternak/<?php echo $data['img_profil']; ?>" height="200" width="200">
+             <img class="rounded-circle mx-auto d-block img-fluid" src="foto_peternak/<?php echo $data['img_profil']; ?>" height="200" width="200">
           </div>
         </div>
         <hr>

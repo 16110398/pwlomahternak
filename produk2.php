@@ -5,7 +5,7 @@
 				<a href="index.php?halaman=detail&id=<?php echo $perproduk['kd_ternak'];?>">
 					<div class="card-body" style="text-align:center; overflow:hidden; padding:0;">
 					
-						<img class="image img-fluid mx-auto" alt="responsive image" style="height:180px; width:220px ;  "; src="foto_produk/<?php echo $perproduk['foto'];?>"> 
+						<img class="image img-fluid mx-auto" alt="responsive image" style="height:180px;" src="foto_produk/<?php echo $perproduk['foto'];?>"> 
 						<div class="middle">
     						<div class="tombol">Lihat Detail</div>
   						</div>

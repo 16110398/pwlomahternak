@@ -133,40 +133,41 @@ if(isset($_SESSION['pelanggan'])) {
 
 
 <div class="container-fluid bg-light">
-  <div class="row mx-auto">
-    <div class="col-xs-12 col-md-3 col-lg-3 col-xl-3 my-2">
-      <img src="icon/omahternak.png" width="200" title="Omahternak.id">
+    <div class="row mx-auto">
+      <div class="col-xs-12 col-md-12 col-lg-4 col-xl-4 my-2">
+        <img src="icon/omahternak.png" width="200" title="Omahternak.id">
+      </div>
+      <div class="col-xs-12 col-md-12 col-lg-4 col-xl-4 my-3">
+        <img src="icon/bank.png" title="rekening bersama" style="width: 300px; height: 30px;">
+      </div>
+      <div class="col-xs-12 col-md-12 col-lg-4 col-xl-4 my-2 panelfootersosmed justify-content-center">
+        <h6>Ikuti Kami :</h6>
+         <ul>
+              <li><a rel="follow" target="_blank" href="#"><img alt="facebook omahternak" title="Facebook Omahternak" src="icon/facebook.png" width="30px"></a></li>
+
+              <li><a rel="follow" target="_blank" href="#"><img alt="twitter omahternak" title="Twitter Omahternak" src="icon/twitter.png" width="30px"></a></li>
+
+              <li><a rel="follow" target="_blank" href="#"><img alt="instagram omahternak" title="Instagram Omahternak" src="icon/instagram.png" width="30px"></a></li>
+
+              <li><a rel="follow" target="_blank" href="#"><img alt="youtube omahternak" title="Youtube Omahternak" src="icon/youtube.png" width="30px"></a></li>
+
+              <li><a rel="follow" target="_blank" href="#"><img alt="google plus omahternak" title="Google Plus Omahtenak" src="icon/google-plus.png" width="30px"></a></li>
+            </ul>
+      </div>
     </div>
-    <div class="col-xs-12 col-md-6 col-lg-6 col-xl-6 my-3">
-      <img class="ml-sm-5" src="icon/bank.png" title="rekening bersama" style="width: 300px; height: 30px;">
-    </div>
-    <div class="col-xs-12 col-md-3 col-lg-3 col-xl-3 my-2 panelfootersosmed mx-auto">
-      <h6>Ikuti Kami :</h6>
-       <ul>
-            <li><a rel="follow" target="_blank" href="#"><img alt="facebook omahternak" title="Facebook Omahternak" src="icon/facebook.png" width="30px"></a></li>
-
-            <li><a rel="follow" target="_blank" href="#"><img alt="twitter omahternak" title="Twitter Omahternak" src="icon/twitter.png" width="30px"></a></li>
-
-            <li><a rel="follow" target="_blank" href="#"><img alt="instagram omahternak" title="Instagram Omahternak" src="icon/instagram.png" width="30px"></a></li>
-
-            <li><a rel="follow" target="_blank" href="#"><img alt="youtube omahternak" title="Youtube Omahternak" src="icon/youtube.png" width="30px"></a></li>
-
-            <li><a rel="follow" target="_blank" href="#"><img alt="google plus omahternak" title="Google Plus Omahtenak" src="icon/google-plus.png" width="30px"></a></li>
-          </ul>
-    </div>
-  </div>
 </div>
-<div class="container-fluid bg-success">
+
+<div class="container-fluid bg-success mx-auto">
   <div class="row mx-auto ml-sm-5" style="padding-top: 10px">
-    <div class="col-xs-12 col-md-6 col-lg-3 col-xl-3">
+    <div class="col-xs-12 col-md-12 col-lg-3 col-xl-3">
       <h5 style="color: white"><strong>Tentang Kami</strong></h5>
       <p style="color: white" class="text-justify"><strong>Omahternak.id</strong> 
       adalah Tempat Jual Beli Ternak Berkualitas dan Investasi Ternak Terpercaya. Jl. Bibis No.25, Bangunjiwo, Kasihan, Bantul, D.I Yogyakarta.<br/> cs@omahternak.com <br/>Jam Layanan: 08.00-17.00 WIB</p>
       
     </div>
-    <div class="col-xs-12 col-md-6 col-lg-3 col-xl-3">
-    <h5 class="text-white ml-sm-5"><strong>Panduan Umum</strong></h5>
-      <ul class="navbar-nav ml-sm-5 my-2">
+    <div class="col-xs-12 col-md-12 col-lg-3 col-xl-3">
+    <h5 class="text-white"><strong>Panduan Umum</strong></h5>
+      <ul class="navbar-nav my-2">
       	<li><a class="text-white" style="text-decoration: none;" href="">Tentang Omahternak</a></li>
       	<li><a class="text-white" style="text-decoration: none;" href="">FAQ</a></li>
         <li><a class="text-white" style="text-decoration: none;" href="">Cara mendapatkan sertifikat hewan ternak</a></li>
@@ -176,9 +177,9 @@ if(isset($_SESSION['pelanggan'])) {
       	<li><a class="text-white" style="text-decoration: none;" href="">Syarat dan Ketentuan</a></li>
       </ul>
     </div>
-    <div class="col-xs-12 col-md-6 col-lg-3 col-xl-3 my-1">
-    <h5 class="text-white ml-sm-4"><strong>Hubungi Kami</strong></h5>      
-      <ul class="navbar-nav ml-sm-4">
+    <div class="col-xs-12 col-md-12 col-lg-3 col-xl-3 my-1">
+    <h5 class="text-white"><strong>Hubungi Kami</strong></h5>      
+      <ul class="navbar-nav">
       	<li><a class="text-white" style="text-decoration: none;" href=""><i class="fas fa-envelope"></i> info@omahternak.id</a></li>
       	<li><a class="text-white" style="text-decoration: none;" href=""><i class="fab fa-facebook"></i> omahternak.id</a></li>
       	<li><a class="text-white" style="text-decoration: none;" href=""><i class="fab fa-instagram"></i> omahternak.id</a></li>
