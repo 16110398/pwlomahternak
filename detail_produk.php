@@ -1,4 +1,3 @@
-
 <?php 
 $kd_ternak = $_GET["id"];
 $detail = mysqli_query($koneksi, "SELECT * FROM ternak JOIN pelanggan ON ternak.id_user=pelanggan.id_user WHERE kd_ternak='$kd_ternak'");
@@ -7,12 +6,12 @@ $ternak = $detail->fetch_assoc();
 ?>
 
 <!--<div class="container" style="margin-top: 70px;">
-	<h5>Detail Produk Coming Soon</h5>
-	<?php 
-	echo "<pre>"; 
-	print_r($ternak); 
-	echo "</pre>";
-	?>
+  <h5>Detail Produk Coming Soon</h5>
+  <?php 
+  echo "<pre>"; 
+  print_r($ternak); 
+  echo "</pre>";
+  ?>
 </div> -->
 <div class="container" style="margin-top: 80px;">
       <?php 
@@ -34,7 +33,9 @@ $ternak = $detail->fetch_assoc();
       <div class="card bg-white">
         <div class="row">
           <div class="col-12 col-md-5 col-lg-5">
-            <img class="d-block img-fluid ml-3 my-3" src="foto_produk/<?php echo $ternak['foto'];?>" style="height: 220px;">
+            <div class="ml-2 my-3 mr-2">
+                <img class="d-block img-fluid" src="foto_produk/<?php echo $ternak['foto'];?>" style="height: 220px; width:100%;">
+            </div>
           </div>
           <div class="col-12 col-md-7 col-lg-7">
             <div class="row mr-1">
@@ -60,12 +61,12 @@ $ternak = $detail->fetch_assoc();
               </div>
             </div>
             <div class="row mr-1">
-              <div class="col-12">
-                <a href="keranjang.php" class="btn btn-success btn-block" type="submit" title="Keranjang Belanja"><i class="fas fa-shopping-cart fa-md"></i> <strong>BELI SEKARANG</strong></a>
+              <div class="col-12 ml-2">
+                <a href="beli.php?id=<?php echo $ternak['kd_ternak']; ?>" class="btn btn-success btn-block d-block" type="submit" title="Keranjang Belanja"><i class="fas fa-shopping-cart fa-md"></i> <strong>BELI SEKARANG</strong></a>
               </div>
               <div class="col-12 my-3">
-                <div class="card mx-auto border">
-                  <p class="ml-2 mr-2 my-2"><strong>Transaksi Aman Gunakan Rekening Bersama Omahternak</strong><br/>
+                <div class="card border ml-3">
+                  <p class="ml-2 mr-2 my-2 d-block"><strong>Transaksi Aman Gunakan Rekening Bersama Omahternak</strong><br/>
                     1. Hanya pembayaran melalui rekening an Omahternak.id dijamin 100% aman. <a href="">Lihat selengkapnya </a> <br/> 2. Uang akan dikembalikan jika barang tidak diterima
                   </p>
                 </div>
@@ -82,7 +83,7 @@ $ternak = $detail->fetch_assoc();
       <div class="container">
         <div class="row my-3 ml-1">
           <div class="col-12">
-            <h4 class="text-success my-1 ml-1">Profil Peternak</h4>
+            <h5 class="text-success my-1 ml-1">Profil Peternak</h5>
           </div>
         </div>
         <hr/>
@@ -125,6 +126,31 @@ $ternak = $detail->fetch_assoc();
   </div>
 </div>
 
+<div class="modal fade" id="Pesan">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      
+       
+      <div class="modal-header">
+        <h4 class="modal-title">Kirim Pesan</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+        
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="comment">Pesan :</label>
+            <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary float-right">Kirim</button>
+        </form>
+      </div>
+         
+    </div>
+  </div>
+</div>
+
+
 <div class="container my-3">
   <div class="row">
     <div class="col-12 col-md-12 col-lg-9 col-xl-9 my-1">
@@ -157,12 +183,29 @@ $ternak = $detail->fetch_assoc();
                   <p><?php echo $ternak['deskripsi']; ?></p>
                   
                 </div>
-                <div id="menu2" class="container tab-pane fade"><br>
-                  <h5>Komentar</h5>
-                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                <div id="menu2" class="container tab-pane fade mb-4"><br>
+                  <h5 class="ml-3 mb-2">KOMENTAR</h5>
+                  <div class="container">
+                       <form>
+                        <div class="form-group">
+                          <label for="komen">Pesan :</label>
+                          <textarea class="form-control" rows="5" id="komen" name="komen"></textarea>
+                        </div>
 
-                  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <button type="submit" class="btn btn-primary float-right btn-block mb-4">Kirim</button>
+                      </form>
+                  </div>
+                  
+                  <div class="container mt-5">
+                     <hr/>
+                    <div class="card">
+                       <div class="card-body">
+                        <p>User  : Wawan</p>
+                        <p>Pesan : wjwjewjwwjhi</p>
+                       </div>
+                    </div>
+                  </div>
+
                 </div>
               </div>
             </div>

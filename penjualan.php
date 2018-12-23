@@ -1,32 +1,34 @@
-            <ul class="nav nav-pills" role="tablist">
-                <li class="nav-item">
-                  <a class="nav-link active" data-toggle="pill" href="#home">Ternak Saya</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-toggle="pill" href="#menu1">Penjualan</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-toggle="pill" href="#menu2">Pembelian</a>
-                </li>
-            </ul>
+<div class="container">
+  <div class="clearfix">
+    <span class="float-left"><h2>Penjualan</h2></span>
+    <span class="float-right"><a href="index.php?halaman=profil&page=tambahternak" class="btn btn-success btn-sm">Jual Ternak</a></span>
+  </div>
+  
+  <br>
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#allternak">Semua Ternak Saya</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#setuju">Disetujui</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#tolak">Ditolak</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#sertifikat">Sertifkat</a>
+    </li>
+  </ul>
 
-              
-              <div class="tab-content">
-                <div id="home" class="container tab-pane active"><br>
-                  <div class="row">
-                    <div class="col-12 col-md-6 col-lg-6">
-                      <h3>Daftar Ternak</h3>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-6">
-                      <h3 class="float-right"><a class="btn btn-success" href="index.php?halaman=profil&page=tambahternak"><i class="fas fa-plus"></i> Jual Ternak</a></h3>
-                    </div>
-                  </div>
-                  
-                  <div class="row">
-                    <?php 
+  
+  <div class="tab-content">
+    <div id="allternak" class="container tab-pane active"><br>
+      <h3>Ternak Saya</h3>
+      <div class="row">
+    <?php 
                       $produk = mysqli_query($koneksi, "SELECT * FROM ternak JOIN pelanggan ON ternak.id_user=pelanggan.id_user WHERE ternak.id_user='$data[id_user]' "); ?>
                     <?php while ($perproduk=$produk->fetch_assoc()) { ?>
-                      <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4" style="padding-bottom:15px; ; margin-top: 7px;">
+                      <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3" style="padding-bottom:15px; ; margin-top: 7px;">
                         <div class="card bg-white border">
                           <div class="kontainer bg-white rounded">
                             
@@ -50,17 +52,19 @@
                         </div>
                       </div>    
                     <?php } ?>  
-                  </div><!-- row!-->
-                </div>
-
-                <div id="menu1" class="container tab-pane fade"><br>
-                  <h3>Penjualan</h3>
-                  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-                <div id="menu2" class="container tab-pane fade"><br>
-                  <h3>Pembelian</h3>
-                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-                </div>
-              </div>
-            </div>
-
+                  </div><!-- row!-->                
+    </div>
+    <div id="setuju" class="container tab-pane fade"><br>
+      <h3>Ternak Yang Disetujui</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div id="tolak" class="container tab-pane fade"><br>
+      <h3>Ternak Yang Ditolak</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+    </div>
+    <div id="sertifikat" class="container tab-pane fade"><br>
+      <h3>Sertifikat Ternak</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+    </div>
+  </div>
+</div>

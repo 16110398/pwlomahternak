@@ -15,7 +15,7 @@
 				</div>
 				<div class="card-footer text-center">
 					<div class="caption">
-						<a class="link-text" href="detail_produk.php?id=<?php echo $perproduk['kd_ternak'];?>">
+						<a class="link-text" href="index.php?halaman=detail&id=<?php echo $perproduk['kd_ternak'];?>">
 						<h6 class="link-text text-success card-text mb-1"><strong> <?php echo $perproduk['nama_ternak']; ?></strong></h6></a>
 
 						<h6 class="card-text text-warning"> Rp. <?php echo number_format($perproduk['harga']);?>,- /Ekor</h6>

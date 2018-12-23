@@ -1,11 +1,8 @@
 
-<div class="container w-75 mx-auto mb-5">
+<div class="container w-50 mx-auto mb-5">
 	<div class="row">
 		<div class="col-12 col-md-6 col-lg-6 mt-5">
 			<h4 class="text-success"><strong>Ubah Profil</strong></h4>
-		</div>
-		<div class="col-12 col-md-6 col-lg-6">
-			<a class="btn btn-success float-right" href="index.php?halaman=profil">Home Profil</a>
 		</div>
 	</div>
 	

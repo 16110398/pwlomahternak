@@ -1,35 +1,36 @@
-<div class="container" style="margin-top: 70px;">
-	<div class="row mx-auto">
-	<div id="omahternak" class="carousel slide" data-ride="carousel" style="margin-top: 10px;">
-	  <ul class="carousel-indicators">
-	    <li data-target="#omahternak" data-slide-to="0" class="active"></li>
-	    <li data-target="#omahternak" data-slide-to="1"></li>
-	    <li data-target="#omahternak" data-slide-to="2"></li>
-	  </ul>
-	  
-	  
-	  <div class="carousel-inner">
-	    <div class="carousel-item active">
-	      <img src="img/banner1.png" alt="#omahternak-1" width="1000" height="300">
-	    </div>
-	    <div class="carousel-item">
-	      <img src="img/banner2.png" alt="#omahternak-2" width="1100" height="500">
-	    </div>
-	    <div class="carousel-item">
-	      <img src="img/banner3.png" alt="#omahternak-3" width="1100" height="500">
-	    </div>
-	  </div>
-	  
-	  <a class="carousel-control-prev" href="#omahternak" data-slide="prev">
-	    <span class="carousel-control-prev-icon"></span>
-	  </a>
-	  <a class="carousel-control-next" href="#omahternak" data-slide="next">
-	    <span class="carousel-control-next-icon"></span>
-	  </a>
-	</div>
-</div>
-</div>
- 
+<section class="no-margin">
+  <div class="container-fluid" style="margin-top: 60px;">
+  	<div class="row d-block">
+  	<div id="omahternak" class="carousel slide" data-ride="carousel"">
+  	  <ul class="carousel-indicators">
+  	    <li data-target="#omahternak" data-slide-to="0" class="active"></li>
+  	    <li data-target="#omahternak" data-slide-to="1"></li>
+  	    <li data-target="#omahternak" data-slide-to="2"></li>
+  	  </ul>
+  	   
+  	  <div class="carousel-inner">
+  	    <div class="carousel-item active">
+  	      <img src="img/1.jpg" alt="#omahternak-1">
+  	    </div>
+  	    <div class="carousel-item">
+  	      <img src="img/2.jpg" alt="#omahternak-2">
+  	    </div>
+  	    <div class="carousel-item">
+  	      <img src="img/3.jpg" alt="#omahternak-3">
+  	    </div>
+  	  </div>
+  	  
+  	  <!-- <a class="carousel-control-prev" href="#omahternak" data-slide="prev">
+  	    <span class="carousel-control-prev-icon"></span>
+  	  </a>
+  	  <a class="carousel-control-next" href="#omahternak" data-slide="next">
+  	    <span class="carousel-control-next-icon"></span>
+  	  </a> !-->
+  	</div>
+  </div>
+  </div>
+</section>
+
 <div class="container" style="margin-top: 10px;" >
   <div class="card-body text-white bg-success">
     <h5><strong>Ternak Terbaru</strong></h5>

@@ -11,6 +11,37 @@ if(isset($_SESSION['pelanggan'])) {
 <!DOCTYPE html>
 <html>
 <head>
+  <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-GNTWQG9');</script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131282064-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-131282064-1');
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel=icon type=image/png href="http://omahternak.id/icon/omahternak1.png">
+    <!meta http-equiv="refresh" content="30">
+    <!meta name="google-site-verification" content="sbsmSdURfBifY3twsPhLYdQTG3onX0UnLW6vM8la2U0"/>
+    <link rel="canonical" href="http://www.omahternak.id"/>
+    
+    <meta property="og:url" content="http://www.omahternak.id" />
+    <meta property="og:site_name" content="Omah Ternak"/>
+    <meta property="og:description" content="Situs jual beli hewan ternak berkualitas dan bersertifikat, lengkap dan terpercaya. Beli hewan ternak sehat, Omah Ternak, omahternak, omahternak.id, jual ternak, jual hewan ternak">
+    <meta name=title content="OMAH TERNAK">
+    <meta name="author" content="omahternak.id">
+    <meta name="description" content="Omah Ternak, Omahternak situs jual beli hewan ternak bersertifikat di Indonesia. Jual beli hewan ternak berkualitas,omah ternak, OMAH TERNAK, Omah Ternak, omahternak, jual ternak, jual beli hewan ternak, jual beli hewan ternak bersertifikat, jual ternak bersertifikat, omahternak.id, jual hewan ternak, jual sapi">
 	<title>Tempat Jual Beli Hewan Ternak Berkualitas | Omahternak.id</title>
 	<link rel="icon" type="image/png" href="icon/omahternak1.png">
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
@@ -29,7 +60,11 @@ if(isset($_SESSION['pelanggan'])) {
  	</style>
 </head>
 <body style="background-color: #f2f2f2">
- 
+  <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-GNTWQG9"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
   <div class="container-fluid">
   <a class="navbar-brand" href="index.php">
@@ -73,7 +108,7 @@ if(isset($_SESSION['pelanggan'])) {
         <a href="pesan.php" class="text-success" type="submit" title="Pesan Masuk"><i class="fas fa-comments fa-lg"></i></a>
       </li>
       <li class="nav-item my-3 mr-sm-3">
-        <a href="notif.php" class="text-success" type="submit" title="Pemberitahuan"><i class="fas fa-bell fa-lg"></i></a>
+        <a href="notif.php" class="text-success border-0" type="submit" title="Pemberitahuan"><i class="fas fa-bell fa-lg"></i></a>
       </li>
        <?php else: ?> 
       <li class="nav-item my-1 mr-sm-1">
@@ -123,6 +158,8 @@ if(isset($_SESSION['pelanggan'])) {
     }
     elseif ($_GET['halaman']=="profil") {
       include 'profil.php';
+    }elseif ($_GET['halaman']=='tentang') {
+      include 'tentangomahternak.php';
     }
 
   }else{
@@ -130,6 +167,7 @@ if(isset($_SESSION['pelanggan'])) {
   }
 
  ?>
+
 
 
 <div class="container-fluid bg-light">
@@ -168,7 +206,7 @@ if(isset($_SESSION['pelanggan'])) {
     <div class="col-xs-12 col-md-12 col-lg-3 col-xl-3">
     <h5 class="text-white"><strong>Panduan Umum</strong></h5>
       <ul class="navbar-nav my-2">
-      	<li><a class="text-white" style="text-decoration: none;" href="">Tentang Omahternak</a></li>
+      	<li><a class="text-white" style="text-decoration: none;" href="index.php?halaman=tentang">Tentang Omahternak</a></li>
       	<li><a class="text-white" style="text-decoration: none;" href="">FAQ</a></li>
         <li><a class="text-white" style="text-decoration: none;" href="">Cara mendapatkan sertifikat hewan ternak</a></li>
       	<li><a class="text-white" style="text-decoration: none;" href="">Cara Jual Barang</a></li>

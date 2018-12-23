@@ -9,9 +9,6 @@ $peternak=$qternak->fetch_assoc();
 		<div class="col-12 col-md-6 col-lg-6 mt-5">
 			<h4 class="text-success"><strong>Ubah Produk</strong></h4>
 		</div>
-		<div class="col-12 col-md-6 col-lg-6">
-			<a class="btn btn-success float-right" href="index.php?halaman=profil">Home Profil</a>
-		</div>
 	</div>
 	
 	<form method="post" enctype="multipart/form-data">
@@ -54,28 +51,6 @@ $peternak=$qternak->fetch_assoc();
 				<label>Foto :</label>
 				<input type="file" class="form-control-file border" name="foto[]">
 			</div>
-			<div class="form-group">
-				<img src="foto_produk/<?php echo $peternak['foto2']; ?>" width="200">
-			</div>
-			<div class="form-group">
-				<label>Foto :</label>
-				<input type="file" class="form-control-file border" name="foto2[]">
-			</div>
-			<div class="form-group">
-				<img src="foto_produk/<?php echo $peternak['foto3']; ?>" width="200">
-			</div>
-			<div class="form-group">
-				<label>Foto :</label>
-				<input type="file" class="form-control-file border" name="foto3[]">
-			</div>
-			<div class="form-group">
-				<img src="foto_produk/<?php echo $peternak['foto4']; ?>" width="200">
-			</div>
-			<div class="form-group">
-				<label>Foto :</label>
-				<input type="file" class="form-control-file border" name="foto4[]">
-			</div>
-
 
 			<div class="form-group">
 				<input class="btn btn-success btn-block" type="submit" name="edit" value="SIMPAN">
