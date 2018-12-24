@@ -1,13 +1,16 @@
 <?php 
-session_start();
-require_once 'koneksi.php';
+	session_start();
+	require_once 'cek.php';
+	require_once 'koneksi.php';
+?>
+<?php
+  if(!isset($_SESSION['pelanggan'])) {
+     header('location:login.php'); 
+  } else { 
+     $data = $_SESSION['pelanggan']; 
+  }
 
-
-if (isset($_SESSION['pelanggan'])) {
-	echo "<script>alert('Silahkan login');</script>";
-	echo "<script>location='login.php';</script>";
-}
- ?>
+?>
 
   <table width="500" border="1">
  	<thead>

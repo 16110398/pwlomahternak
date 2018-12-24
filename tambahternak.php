@@ -68,12 +68,15 @@ if (isset($_POST['simpan']))
 
 	$fototernak=$_FILES['foto']['name'];
 	$lokasi=$_FILES['foto']['tmp_name'];
-	
 	move_uploaded_file($lokasi, "foto_produk/".$fototernak);
 
-	$koneksi->query("INSERT INTO ternak (id_user,nama_ternak,jenis_ternak,berat,umur,jumlah,deskripsi,harga,minim_beli,foto) VALUES ('$data[id_user]',$nama','$jenis','$berat','$umur','$jumlah','$deskripsi','$harga','$minimbeli','$fototernak')") or die ("error");
+	//$cek="SELECT ternak.id_user FROM ternak, pelanggan WHERE ternak.id_user=pelanggan.id_user AND (ternak.id_user=$data[id_user])";
 
-	echo "<script>alert('Ternak berhasil ditambahkan');</script>";
-	echo "<meta http-equiv='refresh' content='1;url=index.php?halaman=profil&page=penjualan'>";
+
+	$con=mysqli_query($koneksi, "INSERT INTO ternak(id_user,nama_ternak,jenis_ternak,berat,umur,jumlah,deskripsi,harga,minim_beli,foto) VALUES('$data[id_user]','$nama', '$jenis','$berat','$umur','$jumlah','$deskripsi','$harga','$minimbeli','$fototernak');") or die("error");
+	
+		echo "<script>alert('Ternak berhasil ditambahkan');</script>";
+		echo "<meta http-equiv='refresh' content='1;url=index.php?halaman=profil&page=penjualan'>";
+	
 }
 ?>

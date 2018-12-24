@@ -36,8 +36,8 @@
                                 <img class="image img-fluid mx-auto" alt="responsive image" style="height:150px; width:100% ;" src="foto_produk/<?php echo $perproduk['foto'];?>"> 
                                 <div class="middle">
                                   <a class="text-success" href="index.php?halaman=detail&id=<?php echo $perproduk['kd_ternak'];?>" title="Lihat"><i class="fas fa-eye fa-lg"></i></a>
-                                  <a class="ml-2 mr-2" href="index.php?halaman=profil&page=editproduk&id<?php echo $perproduk['kd_ternak'];?>" title="Edit"><i class="fas fa-edit fa-lg"></i></a>
-                                  <a class="text-danger" href="index.php?halaman=detail&id=<?php echo $perproduk['kd_ternak'];?>" title="Hapus"><i class="fas fa-trash-alt fa-lg"></i></a>
+                                  <a class="ml-2 mr-2" href="index.php?halaman=profil&page=editproduk&id=<?php echo $perproduk['kd_ternak'];?>" title="Edit"><i class="fas fa-edit fa-lg"></i></a>
+                                  <a class="text-danger" href="index.php?halaman=profil&page=hapusproduk&id=<?php echo $perproduk['kd_ternak'];?>" title="Hapus"><i class="fas fa-trash-alt fa-lg"></i></a>
                                 </div>                           
                               </div>
                           </div>

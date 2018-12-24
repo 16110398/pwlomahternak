@@ -53,8 +53,8 @@
 .tombol {
   background-color: #28a745;
   color: white;
-  font-size: 14px;
-  padding: 8px 16px;
+  font-size: 13px;
+  padding: 7px 14px;
 }
 
 .tombol:hover{

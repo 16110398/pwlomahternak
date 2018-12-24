@@ -119,6 +119,9 @@
                   if ($_GET['page']=="penjualan") {
                     include 'penjualan.php';
                   }
+                  if ($_GET['page']=="hapusproduk") {
+                    include 'hapusternak.php';
+                  }
 
                 }else{
                   include 'myprofil.php';

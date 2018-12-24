@@ -59,7 +59,7 @@ if(isset($_SESSION['pelanggan'])) {
 
  	</style>
 </head>
-<body style="background-color: #f2f2f2">
+<body >
   <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-GNTWQG9"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -196,8 +196,8 @@ if(isset($_SESSION['pelanggan'])) {
 </div>
 
 <div class="container-fluid bg-success mx-auto">
-  <div class="row mx-auto ml-sm-5" style="padding-top: 10px">
-    <div class="col-xs-12 col-md-12 col-lg-3 col-xl-3">
+  <div class="row mx-auto" style="padding-top: 10px">
+    <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
       <h5 style="color: white"><strong>Tentang Kami</strong></h5>
       <p style="color: white" class="text-justify"><strong>Omahternak.id</strong> 
       adalah Tempat Jual Beli Ternak Berkualitas dan Investasi Ternak Terpercaya. Jl. Bibis No.25, Bangunjiwo, Kasihan, Bantul, D.I Yogyakarta.<br/> cs@omahternak.com <br/>Jam Layanan: 08.00-17.00 WIB</p>

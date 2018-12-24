@@ -113,11 +113,21 @@ $ternak = $detail->fetch_assoc();
          <div class="row">
           <div class="col-12 mb-3">
             <?php if(isset($_SESSION["pelanggan"])): ?>
-              <a href="pesan.php" class="btn btn-success btn-block">Kirim Pesan</a>
+              <form method="post">
+                <a href="#" class="btn btn-success btn-block" data-toggle="modal" data-target="#Pesan">Kirim Pesan</a>
+              </form>
             <?php else: ?>
-              <a href="" class="btn btn-success btn-block">Kirim Pesan</a>
+              <form method="post">
+                <input class="btn btn-success btn-block" type="submit" name="kpesan" value="Kirim Pesan">
+              </form>
             <?php endif ?>
           </div>
+          <?php if(isset($_POST['kpesan'])) 
+            {
+              echo "<script>alert('Anda harus Login!');</script>";
+              echo "<meta http-equiv='refresh' content='1;url=login.php'>";
+            }
+          ?>
         </div>
 
       </div>
@@ -137,13 +147,14 @@ $ternak = $detail->fetch_assoc();
       </div>
         
       <div class="modal-body">
-        <form>
+        <form method="post">
           <div class="form-group">
-            <label for="comment">Pesan :</label>
-            <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+            <label>Pesan :</label>
+            <textarea class="form-control" rows="5"  name="tekpesan"></textarea>
           </div>
-          <button type="submit" class="btn btn-primary float-right">Kirim</button>
+          <input type="submit" class="btn btn-primary float-right" name="kirim" value="Kirim">
         </form>
+     
       </div>
          
     </div>
@@ -186,22 +197,31 @@ $ternak = $detail->fetch_assoc();
                 <div id="menu2" class="container tab-pane fade mb-4"><br>
                   <h5 class="ml-3 mb-2">KOMENTAR</h5>
                   <div class="container">
-                       <form>
+                       <form method="post">
                         <div class="form-group">
                           <label for="komen">Pesan :</label>
                           <textarea class="form-control" rows="5" id="komen" name="komen"></textarea>
                         </div>
-
-                        <button type="submit" class="btn btn-primary float-right btn-block mb-4">Kirim</button>
+                        <?php if(isset($_SESSION["pelanggan"])): ?>
+                          <input type="submit" class="btn btn-primary float-right btn-block mb-4" name="komentar" value="Kirim">
+                        <?php else: ?>
+                          <input type="submit" class="btn btn-primary float-right btn-block mb-4" name="komentar1" value="Kirim">
+                        <?php endif ?>
                       </form>
+                      <?php if(isset($_POST['komentar1'])) 
+                        {
+                          echo "<script>alert('Anda harus Login!');</script>";
+                          echo "<meta http-equiv='refresh' content='1;url=login.php'>";
+                        }
+                      ?>
                   </div>
                   
                   <div class="container mt-5">
                      <hr/>
                     <div class="card">
                        <div class="card-body">
-                        <p>User  : Wawan</p>
-                        <p>Pesan : wjwjewjwwjhi</p>
+                        <p>User  : </p>
+                        <p>Pesan : </p>
                        </div>
                     </div>
                   </div>
@@ -262,3 +282,9 @@ $ternak = $detail->fetch_assoc();
   </div>
 </div>
 
+<?php 
+if(isset($_POST['kirim'])) 
+
+    $con=mysqli_query($koneksi, "INSERT INTO pesan(id_user,id_pengirim,nama_pengirim,pesan) VALUES('$ternak[id_user]','$data[id_user]','$data[nama]','$_POST[tekpesan]');") or die("error");
+  
+?>
