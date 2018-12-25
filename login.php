@@ -115,18 +115,18 @@ require_once 'koneksi.php';
 				$loginuser=mysqli_query($koneksi, "SELECT * FROM pelanggan WHERE email='$email' AND password='$password'");
 				$validakun=$loginuser->num_rows;
 				if ($validakun==1)
-				{
-					$akun=$loginuser->fetch_assoc();
-					$_SESSION["pelanggan"]=$akun;
-					$_SESSION["nama"]=$akun;
-					echo "<script>alert('Anda sukses login');</script>";
-					echo "<meta http-equiv='refresh' content='1;url=index.php'>";
-				}
-		else
-			{
-				echo "<script>alert('Anda gagal login, periksa akun anda!');</script>";
-				echo "<script>location='login.php';</script>";
-			}
+					{
+						$akun=$loginuser->fetch_assoc();
+						$_SESSION["pelanggan"]=$akun;
+						$_SESSION["nama"]=$akun;
+						echo "<script>alert('Anda sukses login');</script>";
+						echo "<meta http-equiv='refresh' content='1;url=index.php'>";
+					}
+				else
+					{
+						echo "<script>alert('Anda gagal login, periksa akun anda!');</script>";
+						echo "<script>location='login.php';</script>";
+					}
 		}
 		?>
 	</div>

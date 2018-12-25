@@ -183,11 +183,74 @@ $ternak = $detail->fetch_assoc();
 
               <div class="tab-content">
                 <div id="home" class="container tab-pane active"><br>
-                  <h5>SERTIFIKAT</h5>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  <div class="container">
+                    <div class="col-12">
+                      <div class="row my-3">
+                        <div class="col-1">
+                          <img src="icon/logo_yk.png" class="rounded-circle ml-2" alt="Cinque Terre" height="80">
+                        </div>
+                        <div class="col-11 text-center">
+                          <b>PEMERINTAH KOTA YOGYAKARTA</b><br>
+                          <b>DINAS PERTANIAN</b><br>
+                          <b>BIDANG PETERNAKAN</b><br>
+                          <p>Jl. Gondosuli No.6, Semaki, Umbulharjo, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55165</p>
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="row my-3 ml-1">
+                        <div class="col-12 text-center">
+                          SURAT KETERANGAN KESEHATAN HEWAN/TERNAK<br>
+                          <div class="col-12 justify-content-center"><br></div>
+                          Nomor : 524.3/<?php echo $ternak['id_user']; ?>/<?php echo $ternak['kd_ternak']; ?>/SKKH-2015
+                        </div>
+                        <div>
+                          &nbsp&nbsp&nbsp&nbsp&nbspYang bertanda tangan dibawah ini Dokter Hewan Pemerintah Kota Yogyakarta, menerangkan bahwa pada hari ini telah memeriksakan hewan seperti dibawah ini:
+                        </div>
+                        <br>
+                        <table border="2px" class="col-12" style="margin-top:20px; margin-bottom:20px;">
+                          <tr>
+                            <td style="width:5%">No.</td>
+                            <td style="width:20%">Jenis Hewan</td>
+                            <td style="width:10%">Jumlah</td>
+                            <td style="width:15%">Berat</td>
+                            <td style="width:15%">Umur</td>
+                           
+                          </tr>
+                          <tr>
+                            <td style="width:5%">1</td>
+                            <td style="width:20%"><?php echo $ternak['nama_ternak']; ?></td>
+                            <td style="width:10%"><?php echo $ternak['jumlah']; ?></td>
+                            <td style="width:15%"><?php echo $ternak['berat']; ?> KG</td>
+                            <td style="width:15%"><?php echo $ternak['umur']; ?> Tahun</td>
+                            
+                          </tr>
+                        </table>
+                        <br>
+                        <div>
+                          &nbsp&nbsp&nbsp&nbsp&nbspDan ternyata hewan/ternak tersebut <u>SEHAT</u> secara klinis, tidak menunjukkan tanda-tanda penyakit hewan menular.
+                        </div>
+                        <table style="margin-bottom:40px;">
+                          <tr>
+                            <td>Nama Pemilik</td>
+                            <td>:&nbsp&nbsp<?php echo $ternak['nama']; ?></td>
+                          </tr>
+                          <tr>
+                            <td>Alamat Pemilik</td>
+                            <td>:&nbsp&nbsp<?php echo $ternak['alamat']; ?></td>
+                          </tr>
+                        </table>
+                        <div class="col-12">
+                          <div style="width:40%" class="float-right text-center">
+                            Yogyakarta, 23-12-2018 <br>
+                            DOKTER HEWAN PEMERINTAH <br>
+                            KOTA YOGYAKARTA <br>
+                            <img src="icon/ttd.png" class="rounded-circle ml-2 justify-content-center" alt="Cinque Terre" height="80">
+                            <hr>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                   </div> 
                 </div>
                 <div id="menu1" class="container tab-pane fade"><br>
                   <h5>DESKRIPSI PRODUK</h5>

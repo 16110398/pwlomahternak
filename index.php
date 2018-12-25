@@ -161,6 +161,16 @@ if(isset($_SESSION['pelanggan'])) {
     }elseif ($_GET['halaman']=='tentang') {
       include 'tentangomahternak.php';
     }
+    elseif ($_GET['halaman']=='keranjang') {
+      include 'keranjang.php';
+    }
+    elseif ($_GET['halaman']=='checkout') {
+      include 'checkout.php';
+    }
+    elseif ($_GET['halaman']=='nota') {
+      include 'nota.php';
+    }
+
 
   }else{
     include 'home.php';
@@ -200,7 +210,7 @@ if(isset($_SESSION['pelanggan'])) {
     <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
       <h5 style="color: white"><strong>Tentang Kami</strong></h5>
       <p style="color: white" class="text-justify"><strong>Omahternak.id</strong> 
-      adalah Tempat Jual Beli Ternak Berkualitas dan Investasi Ternak Terpercaya. Jl. Bibis No.25, Bangunjiwo, Kasihan, Bantul, D.I Yogyakarta.<br/> cs@omahternak.com <br/>Jam Layanan: 08.00-17.00 WIB</p>
+      adalah Tempat Jual Beli Ternak Berkualitas dan Investasi Ternak Terpercaya. Jl. Bibis No.25, Bangunjiwo, Kasihan, Bantul, D.I Yogyakarta.<br/> cs@omahternak.id <br/>Jam Layanan: 08.00-17.00 WIB</p>
       
     </div>
     <div class="col-xs-12 col-md-12 col-lg-3 col-xl-3">

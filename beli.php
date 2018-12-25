@@ -16,6 +16,6 @@ else
 //echo "</pre>";
 
 echo "<script>alert('Ternak telah masuk ke keranjang belanja');</script>";
-echo "<script>location='keranjang.php';</script>";
+echo "<script>location='index.php?halaman=keranjang';</script>";
 
 ?>
